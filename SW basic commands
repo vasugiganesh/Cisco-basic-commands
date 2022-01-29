@@ -1,0 +1,31 @@
+!How to set clock in SW-manually
+
+#clock?  , use ? to help finish commands. like clock?,clock set?* 
+#clock set [hh:mm:ss] [month] [day] [year]
+
+!eg: #clock set 12:15:15 January 15 2022
+!*change timezone, UTC def one in cisco*
+
+#clock timezone EST -5 ,  EST is 5 hours ahed of UTC
+#sh clock ,  to show current SW timings
+
+!Running and Startup config**
+!you have to save running config t startup config
+!running config store in RAM- volatile
+!startup config stored in NVRAM-nonvolatile
+
+#sh startup-config. : is command to show the NVRAM
+#sh run   :    running config,if u dont save run config to start up ,it wl b lost
+
+#erase startup-config or write erase  :  to erase nvram
+
+!you can always do write? ..to find which commands
+!**To erase a SW**
+#wr
+#write erase
+#reload
+
+!set hostname
+
+#config t
+#hostname *name*
